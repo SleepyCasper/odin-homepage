@@ -1,3 +1,21 @@
 :root {
-   
+    /* Color palette: */
+   --bg-primary: #0A0A0A;
+   --bg-secondary: #1A1A1A;
+   --bg-icons: #222222; /* for icons */
+   --text-primary: #FFFFFF;
+   --text-secondary: #C7C7C7;
+   --text-button: #0A0A0A;
+   --accent: #eae27b;
+
+   /* Font styles: */
+   --h1: normal 400 6.5rem 'Bebas Neue';
+   --h2: normal 400 4.5rem 'Bebas Neue';
+   /* --h3: normal 500 2rem 'Manrope'; */
+   --h3: normal 600 1.2rem 'Manrope';
+   --nav: ;
+   --body-medium: normal 400 1.125rem 'Manrope';
+   --body-small: normal 500 0.9rem 'Manrope';
+   --button: normal 800 1rem 'Manrope';
+   --link: normal 700 1rem 'Manrope';
 }

@@ -1,0 +1,77 @@
+@keyframes W-animation {
+    from {
+        transform: translate(0, 2em)
+        rotate(-6deg);
+    }
+
+    to {
+        transform: translate(0, 1em)
+        rotate(-6deg);
+    }
+}
+
+@keyframes E-animation {
+    from {
+        
+
+        transform: translate(0, -1em)
+        rotate(2deg);
+    }
+
+    to {
+        transform: translate(0, 0)
+        rotate(2deg);
+    }
+}
+
+@keyframes B-animation {
+    from {
+        transform: translate(0.5em, 2em)
+        rotate(7deg);
+    }
+
+    to {
+        transform: translate(0.5em, 1em)
+        rotate(7deg);
+    }
+}
+
+@keyframes tools-move {
+    from {
+        transform: translateY(-3rem)
+    }
+
+    60% {
+        transform: translateY(0.3rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes desc-move {
+    from {
+        transform: translateY(5rem);
+    }
+
+    60% {
+        transform: translateY(-0.5rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes tools-move-out {
+    from { transform: translateY(0); }
+    40% { transform: translateY(0.3rem); }
+    to { transform: translateY(-3rem); }
+}
+
+@keyframes desc-move-out {
+    from { transform: translateY(0); }
+    40% { transform: translateY(-0.5rem); }
+    to { transform: translateY(5rem); }
+}
