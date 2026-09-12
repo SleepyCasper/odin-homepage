@@ -1,11 +1,35 @@
 import "./styles/styles.css";
 
 const elements = {
+    header: document.querySelector("header"),
     projects: document.getElementById("container-projects"),
-
+    btnContact: document.getElementById("btn-contact"),
+    btnToTop:document.getElementById("btn-to-top")
 }
 
+let lastScrollY = window.scrollY;
+
 const Events = () => {
+    elements.btnToTop.addEventListener("click", () => {
+        document.querySelector("body").scrollIntoView({ behavior: "smooth" });
+        const heading = document.querySelector("h1");
+        heading.setAttribute("tabindex", "-1");
+        heading.focus();
+    })
+
+    elements.btnContact.addEventListener("click", () => {
+        document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+          elements.header.classList.add('hidden');
+        } else {
+          elements.header.classList.remove('hidden');
+        }
+        lastScrollY = window.scrollY;
+    })
+
     elements.projects.addEventListener("mouseover", (e) => {
         showDetails(e)
     })
