@@ -1,6 +1,6 @@
 # 💼 Portfolio homepage
  
-A personal portfolio website built as the capstone project of [The Odin Project](https://www.theodinproject.com/) curriculum — a hand-coded, framework-free site showcasing my front-end projects through interactive, animated project cards.
+A personal portfolio website built as the project of [The Odin Project](https://www.theodinproject.com/) curriculum — a hand-coded, framework-free site showcasing my front-end projects through interactive, animated project cards.
  
 ## Preview
  
