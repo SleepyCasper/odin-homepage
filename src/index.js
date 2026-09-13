@@ -7,9 +7,11 @@ const elements = {
     btnToTop:document.getElementById("btn-to-top")
 }
 
-let lastScrollY = window.scrollY;
-
 const Events = () => {
+    /* let lastScrollY = window.scrollY; */
+    let lastScrollTop = 0;
+    const scrollThreshold = 15; 
+
     elements.btnToTop.addEventListener("click", () => {
         document.querySelector("body").scrollIntoView({ behavior: "smooth" });
         const heading = document.querySelector("h1");
@@ -22,13 +24,21 @@ const Events = () => {
     });
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > lastScrollY) {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll < 0) return; 
+
+        if (Math.abs(currentScroll - lastScrollTop) < scrollThreshold) {
+          return;
+        }
+
+        if (currentScroll > lastScrollTop) {
           elements.header.classList.add('hidden');
         } else {
           elements.header.classList.remove('hidden');
         }
-        lastScrollY = window.scrollY;
-    })
+        lastScrollTop = currentScroll;
+    }, { passive: true });
 
     elements.projects.addEventListener("mouseover", (e) => {
         showDetails(e)

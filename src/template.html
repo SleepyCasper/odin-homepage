@@ -316,19 +316,20 @@
             </div>
             <form action="https://formspree.io/f/xdeovnow" method="post">
                 <div class="wrapper">
-                    <label for="form-name">Your Name:</label>
+                    <label for="form-name"><span>* </span>Your Name:</label>
                     <input id="form-name" name="name" required />
                 </div>
 
                 <div class="wrapper">
-                    <label for="form-email" >Your email:</label>
+                    <label for="form-email" ><span>* </span>Your email:</label>
                     <input type="email" id="form-email" name="email" required>
                 </div>
 
                 <div class="wrapper">
-                    <label for="form-message">Your message:</label>
+                    <label for="form-message"><span>* </span>Your message:</label>
                     <textarea id="form-message" name="message" required></textarea>
                 </div>
+                <p class="required"><span>* </span>Required</p>
 
                 <button type="submit">Send</button>
             </form>
